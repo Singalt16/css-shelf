@@ -1,2 +1,2 @@
 # css-shelf
-shelf effect made using purely HTML and CSS
+shelf effect made with pure HTML and CSS
