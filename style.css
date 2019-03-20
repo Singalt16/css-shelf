@@ -1,0 +1,126 @@
+.navbar-button .top {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: rotateX(90deg) translateZ(50px);
+    z-index: 1;
+}
+
+.top img {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-button .bottom, .navbar-button .left, .navbar-button .right {
+    width: 100px;
+    height: 30px;
+}
+
+.navbar-button .left {
+    position: absolute;
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.navbar-button .right {
+    position: absolute;
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.navbar-button .bottom {
+    position: absolute;
+    z-index: 1;
+    transform: translateZ(50px);
+}
+
+.navbar-button {
+    position: absolute;
+    width: 200px;
+    transform-style: preserve-3d;
+    transform: rotateY(60deg) rotateX(-20deg) rotateZ(-5deg) translateY(60px);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-delay: 0.01s;
+}
+
+.navbar-button-area {
+    z-index: 1;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition-property: z-index;
+    transition-duration: 0.5s;
+}
+
+.navbar-button-area:hover .navbar-button {
+    transform: translateY(10px) rotateX(-80deg);
+}
+
+.navbar-button-area:hover {
+    z-index: 2;
+}
+
+/*.navbar-button:hover div {*/
+    /*transform: translateY(-20px);*/
+/*}*/
+
+/*.navbar-button:hover .top {*/
+    /*transform: translateY(-20px) rotateX(60deg);*/
+/*}*/
+
+/*.navbar-button:hover {*/
+    /*z-index: 1;*/
+/*}*/
+
+.navbar {
+    /*perspective: 30em;*/
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.yellow .top {
+    background-color: yellow;
+}
+
+.yellow .bottom, .yellow .left, .yellow .right {
+    background-color: #a7a700;
+}
+
+.red .top {
+    background-color: red;
+}
+
+.red .bottom, .red .left, .red .right {
+    background-color: #8c0000;
+}
+
+.blue .top {
+     background-color: blue;
+ }
+
+.blue .bottom, .blue .left, .blue .right {
+    background-color: #00009c;
+}
+
+.green .top {
+    background-color: #00e200;
+}
+
+.green .bottom, .green .left, .green .right {
+    background-color: #00a600;
+}
+
+.black .top {
+    background-color: #343434;
+}
+
+.black .bottom, .black .left, .black .right {
+    background-color: black;
+}
