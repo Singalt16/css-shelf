@@ -1,4 +1,52 @@
-.navbar-button .top {
+.shelf {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.book-hover-space {
+    z-index: 0;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: z-index 0.5s;
+    -moz-transition: z-index 0.5s;
+    -o-transition: z-index 0.5s;
+    transition: z-index 0.5s;
+}
+
+.book-hover-space:hover .book {
+    -webkit-transform: translateY(50px) rotateX(-80deg);
+    -moz-transform: translateY(50px) rotateX(-80deg);
+    -ms-transform: translateY(50px) rotateX(-80deg);
+    -o-transform: translateY(50px) rotateX(-80deg);
+    transform: translateY(50px) rotateX(-80deg);
+}
+
+.book-hover-space:hover {
+    z-index: 1;
+}
+
+.book {
+    user-select: none;
+    position: absolute;
+    width: 200px;
+    transform-style: preserve-3d;
+    transform: rotateY(60deg) rotateX(-20deg) rotateZ(-5deg) translateY(60px);
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+
+.top {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -6,82 +54,48 @@
     z-index: 1;
 }
 
+.bottom, .left, .right {
+    width: 100px;
+    height: 30px;
+}
+
+.bottom {
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    -ms-transform: translateZ(50px);
+    -o-transform: translateZ(50px);
+    transform: translateZ(50px);
+}
+
+.left {
+    position: absolute;
+    -webkit-transform: rotateY(-90deg) translateZ(50px);
+    -moz-transform: rotateY(-90deg) translateZ(50px);
+    -ms-transform: rotateY(-90deg) translateZ(50px);
+    -o-transform: rotateY(-90deg) translateZ(50px);
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.right {
+    position: absolute;
+    -webkit-transform: rotateY(90deg) translateZ(50px);
+    -moz-transform: rotateY(90deg) translateZ(50px);
+    -ms-transform: rotateY(90deg) translateZ(50px);
+    -o-transform: rotateY(90deg) translateZ(50px);
+    transform: rotateY(90deg) translateZ(50px);
+}
+
 .top img {
     position: absolute;
     width: 80%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.navbar-button .bottom, .navbar-button .left, .navbar-button .right {
-    width: 100px;
-    height: 30px;
-}
-
-.navbar-button .left {
-    position: absolute;
-    transform: rotateY(-90deg) translateZ(50px);
-}
-
-.navbar-button .right {
-    position: absolute;
-    transform: rotateY(90deg) translateZ(50px);
-}
-
-.navbar-button .bottom {
-    position: absolute;
-    z-index: 1;
-    transform: translateZ(50px);
-}
-
-.navbar-button {
-    position: absolute;
-    width: 200px;
-    transform-style: preserve-3d;
-    transform: rotateY(60deg) rotateX(-20deg) rotateZ(-5deg) translateY(60px);
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-delay: 0.01s;
-}
-
-.navbar-button-area {
-    z-index: 1;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    transform-style: preserve-3d;
-    transition-property: z-index;
-    transition-duration: 0.5s;
-}
-
-.navbar-button-area:hover .navbar-button {
-    transform: translateY(10px) rotateX(-80deg);
-}
-
-.navbar-button-area:hover {
-    z-index: 2;
-}
-
-/*.navbar-button:hover div {*/
-    /*transform: translateY(-20px);*/
-/*}*/
-
-/*.navbar-button:hover .top {*/
-    /*transform: translateY(-20px) rotateX(60deg);*/
-/*}*/
-
-/*.navbar-button:hover {*/
-    /*z-index: 1;*/
-/*}*/
-
-.navbar {
-    /*perspective: 30em;*/
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    left: 50%;
-    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -103,7 +117,7 @@
 
 .blue .top {
      background-color: blue;
- }
+}
 
 .blue .bottom, .blue .left, .blue .right {
     background-color: #00009c;
