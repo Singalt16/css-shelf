@@ -1,0 +1,88 @@
+.container {
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    width: 700px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.actual-shelf {
+    perspective: 20em;
+    position: fixed;
+    top: 47%;
+    left: 50%;
+    width: 1100px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.actual-shelf .shelf-front {
+    transform-style: preserve-3d;
+    height: 60px;
+    background-color: #562808;
+}
+
+.actual-shelf .shelf-front img {
+    filter: brightness(80%);
+    width: 100%;
+    height: 100%;
+}
+
+.actual-shelf .shelf-top img {
+    width: 100%;
+    height: 100%;
+}
+
+.actual-shelf .shelf-back img {
+    width: 100%;
+    height: 100%;
+}
+
+.actual-shelf .shelf-top {
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    -moz-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    -ms-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    -o-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    transform: translateZ(-38px) translateY(18px) rotateX(50deg);
+    height: 100px;
+    background-color: #7a350a;
+}
+
+.actual-shelf .shelf-back {
+    transform-style: preserve-3d;
+    height: 500px;
+    background-color: #56423f;
+    -webkit-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    -moz-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    -ms-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    -o-transform: translateZ(-50px) translateY(50px) rotateX(90deg);
+    transform: translateZ(-75px) translateY(50px);
+}
+
+.ice-and-fire .bottom, .ice-and-fire .left, .ice-and-fire .right {
+    background-image: linear-gradient(to top, #b84d19, #2c160b);
+}
+
+.harry-potter .bottom, .harry-potter .left, .harry-potter .right {
+    background-image: linear-gradient(to top left, #083e60,  black);
+}
+
+.dating-mirror .bottom, .dating-mirror .left, .dating-mirror .right {
+    background-image: linear-gradient(to left, #4d96ae,  #23607f);
+}
+
+.great-teaching .bottom, .great-teaching .left, .great-teaching .right {
+    background-color: #be3941;
+}
+
+.souls-venus .bottom, .souls-venus .left, .souls-venus .right {
+    background-image: linear-gradient(to top, #2c430a,  black);
+}

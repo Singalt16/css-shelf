@@ -1,7 +1,68 @@
 .shelf {
     display: flex;
     flex-direction: row;
-    position: fixed;
+    justify-content: space-evenly;
+}
+
+.book-hover-space {
+    position: relative;
+    width: 200px;
+    height: 160px;
+    transition: z-index 0.3s;
+    z-index: 0;
+}
+
+.book-hover-space:hover {
+    z-index: 1;
+}
+
+.front {
+    position: absolute;
+    width: 160px;
+    height: 240px;
+    -webkit-transform: rotateX(90deg) translateZ(120px);
+    -moz-transform: rotateX(90deg) translateZ(120px);
+    -ms-transform: rotateX(90deg) translateZ(120px);
+    -o-transform: rotateX(90deg) translateZ(120px);
+    transform: rotateX(90deg) translateZ(120px);
+}
+
+.bottom {
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    -webkit-transform: translateZ(120px);
+    -moz-transform: translateZ(120px);
+    -ms-transform: translateZ(120px);
+    -o-transform: translateZ(120px);
+    transform: translateZ(120px);
+}
+
+.left {
+    position: absolute;
+    width: 240px;
+    height: 60px;
+    z-index: 1;
+    -webkit-transform: rotateY(-90deg) translateZ(120px);
+    -moz-transform: rotateY(-90deg) translateZ(120px);
+    -ms-transform: rotateY(-90deg) translateZ(120px);
+    -o-transform: rotateY(-90deg) translateZ(120px);
+    transform: rotateY(-90deg) translateZ(120px);
+}
+
+.right {
+    position: absolute;
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+    -moz-transform: rotateY(90deg) translateZ(100px);
+    -ms-transform: rotateY(90deg) translateZ(100px);
+    -o-transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -11,32 +72,25 @@
     transform: translate(-50%, -50%);
 }
 
-.book-hover-space {
-    z-index: 0;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: z-index 0.5s;
-    -moz-transition: z-index 0.5s;
-    -o-transition: z-index 0.5s;
-    transition: z-index 0.5s;
+.bottom img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-.book-hover-space:hover .book {
-    -webkit-transform: translateY(50px) rotateX(-80deg);
-    -moz-transform: translateY(50px) rotateX(-80deg);
-    -ms-transform: translateY(50px) rotateX(-80deg);
-    -o-transform: translateY(50px) rotateX(-80deg);
-    transform: translateY(50px) rotateX(-80deg);
-}
-
-.book-hover-space:hover {
-    z-index: 1;
+.front, .bottom, .left {
+    background-color: white;
 }
 
 .book {
+    pointer-events: none;
     user-select: none;
     position: absolute;
     width: 200px;
@@ -46,106 +100,17 @@
     -moz-transform: rotateY(60deg) rotateX(-20deg) rotateZ(-5deg) translateY(60px);
     -ms-transform: rotateY(60deg) rotateX(-20deg) rotateZ(-5deg) translateY(60px);
     -o-transform: rotateY(60deg) rotateX(-20deg) rotateZ(-5deg) translateY(60px);
-    transform: rotateY(60deg) rotateX(-20deg) rotateZ(-5deg) translateY(60px);
+    transform: rotateY(60deg) rotateX(-25deg) rotateZ(-5deg) translateY(60px);
     -webkit-transition: transform 0.3s;
     -moz-transition: transform 0.3s;
     -o-transition: transform 0.3s;
     transition: transform 0.3s;
 }
 
-.top {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    -webkit-transform: rotateX(90deg) translateZ(50px);
-    -moz-transform: rotateX(90deg) translateZ(50px);
-    -ms-transform: rotateX(90deg) translateZ(50px);
-    -o-transform: rotateX(90deg) translateZ(50px);
-    transform: rotateX(90deg) translateZ(50px);
-    z-index: 1;
-}
-
-.bottom, .left, .right {
-    width: 100px;
-    height: 30px;
-}
-
-.bottom {
-    position: absolute;
-    z-index: 1;
-    -webkit-transform: translateZ(50px);
-    -moz-transform: translateZ(50px);
-    -ms-transform: translateZ(50px);
-    -o-transform: translateZ(50px);
-    transform: translateZ(50px);
-}
-
-.left {
-    position: absolute;
-    -webkit-transform: rotateY(-90deg) translateZ(50px);
-    -moz-transform: rotateY(-90deg) translateZ(50px);
-    -ms-transform: rotateY(-90deg) translateZ(50px);
-    -o-transform: rotateY(-90deg) translateZ(50px);
-    transform: rotateY(-90deg) translateZ(50px);
-}
-
-.right {
-    position: absolute;
-    -webkit-transform: rotateY(90deg) translateZ(50px);
-    -moz-transform: rotateY(90deg) translateZ(50px);
-    -ms-transform: rotateY(90deg) translateZ(50px);
-    -o-transform: rotateY(90deg) translateZ(50px);
-    transform: rotateY(90deg) translateZ(50px);
-}
-
-.top img {
-    position: absolute;
-    width: 80%;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.yellow .top {
-    background-color: yellow;
-}
-
-.yellow .bottom, .yellow .left, .yellow .right {
-    background-color: #a7a700;
-}
-
-.red .top {
-    background-color: red;
-}
-
-.red .bottom, .red .left, .red .right {
-    background-color: #8c0000;
-}
-
-.blue .top {
-     background-color: blue;
-}
-
-.blue .bottom, .blue .left, .blue .right {
-    background-color: #00009c;
-}
-
-.green .top {
-    background-color: #00e200;
-}
-
-.green .bottom, .green .left, .green .right {
-    background-color: #00a600;
-}
-
-.black .top {
-    background-color: #343434;
-}
-
-.black .bottom, .black .left, .black .right {
-    background-color: black;
+.book-hover-space:hover .book {
+    -webkit-transform: translateY(50px) rotateX(-80deg);
+    -moz-transform: translateY(50px) rotateX(-80deg);
+    -ms-transform: translateY(50px) rotateX(-80deg);
+    -o-transform: translateY(50px) rotateX(-80deg);
+    transform: translateY(50px) rotateX(-80deg);
 }
